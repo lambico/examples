@@ -1,0 +1,6 @@
+syntag: regexp
+^nbactions.xml
+^profiles.xml
+^target
+^consoleSpringHibernate/target
+^consoleSpringHibernate/src/main/assemblies/netbeans-run.xml
