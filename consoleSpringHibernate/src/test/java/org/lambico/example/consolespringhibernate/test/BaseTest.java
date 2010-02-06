@@ -47,8 +47,8 @@ public abstract class BaseTest extends DBTest {
     @Override
     protected String[] getConfigLocations() {
         return new String[]{
-                    "classpath:org/lambico/spring/dao/generic/genericDao.xml",
-                    "classpath:org/lambico/spring/applicationContextBase.xml",
+                    "classpath:org/lambico/spring/dao/hibernate/genericDao.xml",
+                    "classpath:org/lambico/spring/dao/hibernate/applicationContextBase.xml",
                     "classpath:database_test.xml",
                     "classpath:applicationContext.xml"
                 };

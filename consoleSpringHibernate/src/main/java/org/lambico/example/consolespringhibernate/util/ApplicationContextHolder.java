@@ -37,8 +37,8 @@ public class ApplicationContextHolder {
         context = new GenericApplicationContext();
         new XmlBeanDefinitionReader(context).loadBeanDefinitions(
                 new String[]{
-                    "classpath:org/lambico/spring/dao/generic/genericDao.xml",
-                    "classpath:org/lambico/spring/applicationContextBase.xml",
+                    "classpath:org/lambico/spring/dao/hibernate/genericDao.xml",
+                    "classpath:org/lambico/spring/dao/hibernate/applicationContextBase.xml",
                     "classpath:database.xml",
                     "classpath:applicationContext.xml"
                 });
