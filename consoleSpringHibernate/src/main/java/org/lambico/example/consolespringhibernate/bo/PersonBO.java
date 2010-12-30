@@ -20,10 +20,10 @@ package org.lambico.example.consolespringhibernate.bo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import javax.annotation.Resource;
 
 import org.lambico.example.consolespringhibernate.dao.PersonDao;
 import org.lambico.example.consolespringhibernate.po.Person;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,12 +31,12 @@ import org.springframework.transaction.annotation.Transactional;
  * A BO to be used for the tests of the generic DAO.
  *
  * @author <a href="mailto:lucio@benfante.com">Lucio Benfante</a>
- * @version $Revision: ae7fb2fab619 $
+ * @version $Revision: a8d8760b3552 $
  */
 @Component
 public class PersonBO {
 
-    @Autowired
+    @Resource
     private PersonDao personDao;
 
     @Transactional()
