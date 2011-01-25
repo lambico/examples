@@ -45,16 +45,21 @@
     </properties>
     <build>
         <plugins>
+<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptors>
-                        <descriptor>src/assembly/bin.xml</descriptor>
-                        <descriptor>src/assembly/bin-with-dependencies.xml</descriptor>
-                    </descriptors>
-                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+-->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -95,6 +100,7 @@
                         <exclude>nbactions.xml</exclude>
                         <exclude>profiles.xml</exclude>
                         <exclude>**/*.svg</exclude>
+                        <exclude>dependency-reduced-pom.xml</exclude>
                     </excludes>
                     <properties>
                         <name>${project.name}</name>

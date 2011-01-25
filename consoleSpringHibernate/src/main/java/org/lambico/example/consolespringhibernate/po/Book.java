@@ -90,4 +90,10 @@ public class Book extends EntityBase {
     public void setBorrower(Person borrower) {
         this.borrower = borrower;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" + "numPages=" + numPages + " ; author=" + author + " ; title=" + title + " ; borrower=" +
+                borrower + '}';
+    }
 }

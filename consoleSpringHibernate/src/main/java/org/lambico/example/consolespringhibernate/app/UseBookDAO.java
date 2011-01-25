@@ -25,9 +25,10 @@ import org.lambico.example.consolespringhibernate.util.ApplicationContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * A simple example of an application using Parancoe persistence module for Book entity.
+ * A simple example of an application using Lambico for Book entity.
  * @author <a href="mailto:enricogiurin@gmail.com">Enrico Giurin</a>
- * @version $Revision: ae7fb2fab619 $
+ * @author Lucio Benfante <lucio.benfante@gmail.com>
+ * @version $Revision: d3522613318b $
  *
  */
 public class UseBookDAO {
@@ -44,10 +45,10 @@ public class UseBookDAO {
      */
     public static void main(String[] args) {
         UseBookDAO app = new UseBookDAO();
-        Book myBook = new Book("Parancoe Team", "Parancoe: the best framework");
+        Book myBook = new Book("Lambico Team", "Lambico: easy persistence");
 
         Book myBook2 = new Book("Mario Rossi", "My life");
-        Book myBook3 = new Book("Parancoe Team", "Parancoe: tips & trick");
+        Book myBook3 = new Book("Lambico Team", "Lambico: tips & trick");
         Book myBook4 = new Book("The Hitchhiker's Guide to the Galaxy",
                 "Douglas Adams", 320);
 
@@ -56,7 +57,12 @@ public class UseBookDAO {
         app.bookDao.create(myBook3);
         app.bookDao.create(myBook4);
 
-        List<Book> myBooks = app.bookDao.findByAuthor("Parancoe Team");
-        System.out.println(myBooks.size());
+
+        System.out.println("Searching for Lambico Team's books...");
+        List<Book> myBooks = app.bookDao.findByAuthor("Lambico Team");
+        System.out.println(myBooks.size()+" result(s) found!");
+        for (Book book : myBooks) {
+            System.out.println(book);
+        }
     }
 }
