@@ -28,6 +28,8 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <shadedArtifactAttached>true</shadedArtifactAttached>
+                            <shadedClassifierName>executeMe</shadedClassifierName>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>org.lambico.example.consolespringhibernate.app.UseBookDAO</mainClass>
@@ -43,21 +45,6 @@
                     </execution>
                 </executions>
             </plugin>
-<!--
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                    <archive>
-                        <manifest>
-                            <mainClass>org.lambico.example.consolespringhibernate.app.UseBookDAO</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
--->
         </plugins>
     </build>
     <repositories>
